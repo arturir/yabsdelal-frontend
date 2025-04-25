@@ -1,0 +1,35 @@
+.phone-messenger__logo-img {
+    width: 22px;
+    height: 22px;
+}
+.phone-messenger__phone-wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    margin-top: -5px;
+    align-items: center;
+}
+
+@media (min-width: 1060px) {
+
+    .phone-messenger__logo-img {
+        width: 28px;
+        height: 28px;
+    }
+    .phone-messenger__phone-wrapper {
+        column-gap: 8px;
+        margin-top: 5px;
+    }
+    .phone-messenger__phone {
+        margin-right: 5px;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .phone-messenger__logo-img {
+        width: 36px;
+        height: 36px;
+    }
+    
+}

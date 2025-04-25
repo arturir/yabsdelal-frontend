@@ -1,0 +1,277 @@
+.menu {
+    margin: 10px 0 0;
+    padding: 0 0 10px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    border-bottom: 1px solid #EBEBEB;
+}
+.menu__area {
+    display: block;
+    height: 28px;
+    margin: 10px 0 15px;
+}
+.menu__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 340px;
+    margin: 0 auto;
+}
+.menu__wrapper-messengers {
+    display: flex;
+    gap: 8px;
+}
+.menu__messenger {
+    width: 25px;
+    height: 25px;
+}
+.menu__messenger:hover {
+    cursor: pointer;
+}
+.menu__burger {
+    height: 16px;
+    width: 22px;
+    background-image: url("../../images/burger.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: center;
+    margin-left: 8px;
+}
+.menu__burger:hover {
+    cursor: pointer;
+}
+
+.menu__number {
+    display: none;
+}
+.menu__address {
+    display: none;
+}
+.menu__scheme {
+    display: none;
+}
+.menu__links-wrapper {
+    display: none;
+}
+@media (min-width: 768px) {
+    .menu__wrapper {
+        width: 708px;
+    }
+    .menu__area {
+        height: 28px;
+    }
+}
+@media (min-width: 1060px ) {
+    .menu {
+        margin: 15px 0;
+    }
+    .menu__area {
+        margin: 15px 0 20px;
+    }
+    .menu__wrapper {
+        width: 1000px;
+    }
+    .menu__burger {
+        display: none;
+    }
+    .menu__links-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    .menu__link {
+        color: rgba(0,0,0,1);
+        text-decoration: none;
+        margin: 7px 0 0;
+    }
+    .menu__our-services {
+        margin: 7px 12px 0 0;
+        position: relative;
+    }
+    .menu__address-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    .menu__our-services:hover {
+         cursor: pointer;
+    }
+    .menu__our-services::after {
+        position: absolute; 
+        right: -12px;
+        bottom: 2px;
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-image: url("../../images/__service-arrow.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    } 
+    .menu__address {
+        display: block;
+        margin: 7px 0 0;
+    }
+    .menu__scheme {
+        display: block;
+        color: rgba(0,0,0,1);
+        margin: 7px 0 0;
+    }
+    .menu__number {
+        display: block;
+        margin: 7px 0 0 15px;
+        text-decoration: none;
+        color: rgba(0,0,0,1);
+        position: relative;
+    }
+    .menu__number::before {
+        position: absolute; 
+        left: -15px;
+        bottom: 0;
+        content: "";
+        width: 18px;
+        height: 18px;
+        background-image: url("../../images/icons8-phone-30.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .menu__wrapper-messengers {
+        display: none;
+    }
+
+
+    .menu__our-services-wrapper {
+        position: relative;
+    }
+    
+    .menu__dropdown {
+        display: none;
+        position: absolute;
+        top: 100%; /* Появляется ниже текста "Наши услуги" */
+        left: 0;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        z-index: 10;
+        width: 200px;
+    }
+    
+    .menu__dropdown li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .menu__dropdown li a {
+        display: block;
+        padding: 10px 15px;
+        color: #333;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .menu__dropdown li a:hover {
+        background-color: #f7f7f7;
+    }
+    
+    /* Показываем меню при наведении */
+    .menu__our-services-wrapper:hover .menu__dropdown {
+        display: block;
+    }
+
+
+}
+@media (min-width: 1280px) {
+    .menu {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        margin: 15px 0;    
+    }
+    .menu__area {
+        height: 42px;
+   
+    }
+    .menu__wrapper {
+        width: 1064px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    .menu__wrapper-messengers {
+        display: none;
+    }
+    .menu__address {
+        display: block;
+        margin: 7px 0 0;
+    }
+    .menu__address-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    .menu__links-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    
+    .menu__number {
+        display: block;
+        margin: 7px 0 0 15px;
+        text-decoration: none;
+        color: rgba(0,0,0,1);
+        position: relative;
+    }
+    .menu__number::before {
+        position: absolute; 
+        left: -15px;
+        bottom: 0;
+        content: "";
+        width: 18px;
+        height: 18px;
+        background-image: url("../../images/icons8-phone-30.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .menu__scheme {
+        display: block;
+        color: rgba(0,0,0,1);
+        margin: 7px 0 0;
+    }
+    .menu__our-services {
+        margin: 7px 12px 0 0;
+        position: relative;
+    }
+    .menu__our-services:hover {
+         cursor: pointer;
+    }
+    .menu__our-services::after {
+        position: absolute; 
+        right: -12px;
+        bottom: 2px;
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-image: url("../../images/__service-arrow.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .menu__link {
+        color: rgba(0,0,0,1);
+        text-decoration: none;
+        margin: 7px 0 0;
+    }
+}

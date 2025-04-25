@@ -1,0 +1,123 @@
+.location {
+    width: 100%;
+    margin-top: 20px;
+}
+.location__wrapper {
+    padding-top: 10px;
+    border-radius: 20px;
+    width: 360px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    column-gap: 20px;
+    align-items: center;
+    background-color: #F1EDEC;
+    padding-bottom: 25px;
+}
+.location__column-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+.location__text {
+    width: 320px;
+}
+.location__img-scheme {
+    min-width: 150px;
+    min-height: 120px;
+    border-radius: 10px;
+}
+.location__contacts {
+    width: 150px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.location__link {
+    text-decoration: underline !important;;
+}
+.location__contacts-left {
+    display: none;
+}
+.location__contacts-right {
+    display: none;
+}
+.location__map {
+    display: none;
+}
+.location__column-right {
+    display: none;
+}
+@media (min-width: 768px) {
+    .location__wrapper {
+        width: 708px;        
+    }
+    .location__text {
+        width: 652px;
+        
+    }
+}
+@media (min-width: 1060px) {
+    .location__wrapper {
+        width: 1000px;
+        background-color: #fff;
+        flex-direction: row;
+        align-items: start;
+        flex-wrap: wrap;
+    }
+    .location__text {
+        width: 100%;
+        
+    }
+    .location__column-left {
+        background-color: #F1EDEC;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 574px;
+        column-gap: 28px;
+        padding: 17px 0;
+        border-radius: 20px;
+    }
+    .location__contacts {
+       width: 574px;
+       height: auto;
+       margin-left: 30px;
+       display: flex;
+       flex-direction: row;
+       column-gap: 30px;
+       
+    }
+    .location__contacts-left {
+        width: 336px;
+    }
+    .location__adress--mobile {
+        display: none;
+    }
+    .location__hours--mobile {
+        display: none;
+    }
+    .location__link--mobile {
+        display: none;
+    }
+    .location__contacts-left {
+        display: block;
+    }
+    .location__contacts-right {
+        display: block;
+    }
+    .location__column-right {
+        display: block;
+    }
+}
+@media (min-width: 1280px) {
+    .location__wrapper {
+        width: 1064px;
+    }
+
+    
+}

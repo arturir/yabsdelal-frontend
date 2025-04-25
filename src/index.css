@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import url(./styles/reset.css);
+@import url(./styles/typography.css);
+@import url(./components/body/body.css);
+@import url(./components/page/page.css);
+@import url(./components/logo/logo.css);
+@import url(./components/navigation/navigation.css);
+@import url(./components/Burgermenu/Burgermenu.css);
+@import url(./components/Popup/Popup.css);
+@import url(./components/Intro/Intro.css);
+@import url(./components/Prices/Prices.css);
+@import url(./components/CalcForm/CalcForm.css);
+@import url(./components/Form/Form.css);
+@import url(./components/ContactForm/ContactForm.css);
+@import url(./components/Examples/Examples.css);
+@import url(./components/Reviews/Reviews.css);
+@import url(./components/Diaolg/Dialog.css);
+@import url(./components/ContactUs/ContactUs.css);
+@import url(./components/CallbackModal/CallbackModals.css);
+@import url(./components/Location/Location.css);
+@import url(./components/Footer/Footer.css);
+@import url(./components/ContactsIntro/ContactsIntro.css);
+@import url(./components/PhoneMessenger/PhoneMessenger.css);
+@import url(./components/Scheme/Scheme.css);
+@import url(./components/Details/Details.css);
+@import url(./components/VkWidget/VkWidget.css);
+@import url(./components/AboutUs/AboutUs.css);
+@import url(./components/PageNoteFound/PageNoteFound.css);

@@ -1,0 +1,30 @@
+.callback-modal {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #57D900;
+    padding: 0 0 30px;
+    position: relative;
+    margin-top: 100px;
+}
+.callback-modal__close {
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    z-index: 999;
+}
+@media (min-width: 768px) {
+    .callback-modal {
+        width: 708px;
+        padding: 0 30px 30px;
+    }
+}
+@media (min-width: 1060px) {
+    .callback-modal {
+        width: 1000px;
+    }
+}
+@media (min-width: 1280px) {
+
+
+}

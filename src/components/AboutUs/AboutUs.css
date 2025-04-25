@@ -1,0 +1,142 @@
+.about-us {
+    width: 100%;
+}
+.about-us__wrapper {
+    width: 340px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.about__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about-us__intro-column-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about-us__intro-image {
+    border-radius: 15px;
+}
+.about-us__image {
+    border-radius: 10px;
+    width: 100%;
+}
+.about__past {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about__past-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.about-us__past-column-right {
+    display: flex;
+}
+
+.about-us__past-column-left {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.about__now {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about__now-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about-us__now-row-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.about__other {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+@media (min-width: 768px) {
+    .about-us__wrapper {
+        width: 708px;
+
+        gap: 20px;
+    }
+    .about__intro {
+        flex-direction: row;
+    }
+    .about-us__intro-column-left {
+    
+        flex: 0 0 50%;
+    }
+    .about-us__image {
+       width: 49%;
+       height: auto;
+    }
+    .about-us__now-row-top {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 1060px) {
+    .about-us__wrapper {
+        width: 1000px;
+        column-gap: 20px;
+    }
+
+    .about-us__intro-column-left {
+        flex: 0 0 55%;
+        gap: 15px;
+    }
+    .about-us__image {
+        width: 230px;
+        height: 230px;
+    }
+    .about__past-wrapper {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .about-us__past-column-left {
+        flex: 0 0 50%;
+    }
+    .about-us__past-column-right {
+        width: 40%;
+    }
+}
+@media (min-width: 1280px) {
+    .about-us__wrapper {
+        width: 1064px;
+        column-gap: 40px;
+    }
+    .about__intro {
+        gap: 50px;
+    }
+    .about-us__intro-column-left {
+        flex: 0 0 55%;
+        display: flex;
+        gap: 17px;
+    }
+    .about-us__past-column-right {
+        width: 50%;
+    }
+    .about-us__image {
+        width: 250px;
+        height: 250px;
+    }
+}
