@@ -7,6 +7,7 @@ import past1 from "../../images/about-us/past1.jpg";
 import past2 from "../../images/about-us/past2.jpg";
 
 export default function AboutUs () {
+    
     return(
         <div className="about-us">
             <div className="about-us__wrapper">
@@ -53,7 +54,6 @@ export default function AboutUs () {
                         </div>
                     </div>
                 </div>
-
                 <div className="about__now">
                     <h3 className="h3">Наш сервис сейчас</h3>
                     <div className="about__now-wrapper">
@@ -96,7 +96,6 @@ export default function AboutUs () {
                     Спасибо, что выбираете «ЯбСделал». Мы всегда рядом — с 2019 года и на долгие годы вперёд.
                     </p>
                 </div>
-
             </div>
         </div>
     )

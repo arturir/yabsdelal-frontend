@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import telegramColorLogo from "../../images/telegram-color-logo.svg";
-import whatsappColorLogo from "../../images/whatsapp-color-logo.svg";
-import vkColorLogo from "../../images/vk-color-logo.svg";
+import telegramColorLogo from "../../images/icons-messengers/telegram-color-logo.svg";
+import whatsappColorLogo from "../../images/icons-messengers/whatsapp-color-logo.svg";
+import vkColorLogo from "../../images/icons-messengers/vk-color-logo.svg";
 
 export default function PhoneMessanger () {
     return (

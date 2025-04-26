@@ -1,5 +1,4 @@
 .dialog {
-    /* width: 100%; */
     margin-top: 20px;
 }
 .dialog__wrapper {
@@ -37,17 +36,9 @@
 }
 @media (min-width: 768px) {
     .dialog__wrapper {
-        /* width: 708px; */
         margin: 0 auto;
     }
 }
-@media (min-width: 1060px) {
-    .dialog__wrapper {
-        /* width: 1000px; */
-    }
-
-}
-
 @media (min-width: 1280px) {
     .dialog__wrapper {
        width: 450px;

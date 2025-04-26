@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
-import viber from "../../images/viber.svg";
-import whatsapp from "../../images/whatsapp.svg";
-import telegram from "../../images/telegram.svg";
+import viber from "../../images/icons-messengers/viber.svg";
+import whatsapp from "../../images/icons-messengers/whatsapp.svg";
+import telegram from "../../images/icons-messengers/telegram.svg";
 import { servicesList } from "../../constants/servicesList";
 
 

@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-
+import Logo from '../Logo/Logo';
 export default function Footer () {
 
     const year = new Date().getFullYear();
@@ -7,7 +7,7 @@ export default function Footer () {
     return (
         <div className="footer">
             <div className="footer__wrapper">
-                <Link to="/" className="logo footer__logo" >ЯбСделал</Link>
+                <Logo className="logo--footer"/>
                 <div className="footer__nav-wrapper">
                     <ul className="footer__nav-list">
                         <li className="footer__nav-item">

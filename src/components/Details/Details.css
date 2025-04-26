@@ -12,7 +12,6 @@
     align-items: flex-start;
 }
 
-
 @media (min-width: 768px) {
     .details__wrapper {
         width: 708px;

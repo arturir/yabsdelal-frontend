@@ -1,9 +1,9 @@
 @import url(./styles/reset.css);
 @import url(./styles/typography.css);
-@import url(./components/body/body.css);
-@import url(./components/page/page.css);
-@import url(./components/logo/logo.css);
-@import url(./components/navigation/navigation.css);
+@import url(./styles/body/body.css);
+@import url(./styles/page.css);
+@import url(./components/Logo/Logo.css);
+@import url(./components/Navigation/Navigation.css);
 @import url(./components/Burgermenu/Burgermenu.css);
 @import url(./components/Popup/Popup.css);
 @import url(./components/Intro/Intro.css);
@@ -23,5 +23,5 @@
 @import url(./components/Scheme/Scheme.css);
 @import url(./components/Details/Details.css);
 @import url(./components/VkWidget/VkWidget.css);
-@import url(./components/AboutUs/AboutUs.css);
-@import url(./components/PageNoteFound/PageNoteFound.css);
+@import url(./pages/AboutUs/AboutUs.css);
+@import url(./pages/PageNoteFound/PageNoteFound.css);   
