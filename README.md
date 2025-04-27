@@ -40,7 +40,7 @@ npm start
 ## 📞 Контакты
 
 * Telegram: @galtyaev
-* Email: [mailto:artifakt666@yandex.ru](artifakt666@yandex.ru)
+* Email: artifakt666@yandex.ru 
 
 ## 📞 Контакты
 
