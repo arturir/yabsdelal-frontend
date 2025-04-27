@@ -5,10 +5,16 @@ import now3 from "../../images/about-us/now3.jpg";
 import now4 from "../../images/about-us/now4.jpg";
 import past1 from "../../images/about-us/past1.jpg";
 import past2 from "../../images/about-us/past2.jpg";
+import { Helmet } from 'react-helmet';
 
 export default function AboutUs () {
     
     return(
+        <>
+        <Helmet>
+            <title>О нас — сервисный центр ЯбСделал во Владимире: качественный ремонт телефонов</title>
+            <meta name="description" content="Узнайте больше о сервисе ЯбСделал во Владимире: опыт, команда, подход к ремонту телефонов и клиентам. Мы гарантируем высокое качество работы!" />
+        </Helmet>
         <div className="about-us">
             <div className="about-us__wrapper">
                 <div className="about__intro">
@@ -31,27 +37,6 @@ export default function AboutUs () {
                     </div>
                     <div className="about-us__intro-column-right">
                         <img src={now} alt="вывеска сервиса" className="about-us__intro-image" />
-                    </div>
-                </div>
-                <div className="about__past">
-                    <h3 className="h3">Начало работы в 2019 году</h3>
-                    <div className="about__past-wrapper">
-                        <div className="about-us__past-column-left">
-                            <img src={past1} alt="фото сервиса в прошлом - 1" className="about-us__image" />
-                            <img src={past2} alt="фото сервиса в прошлом - 2" className="about-us__image" />
-                        </div>
-                        <div className="about-us__past-column-right">
-                            <p className="p">
-                                Сервисный центр «ЯбСделал» начал свою работу 14 февраля 2019 года — в день, когда тысячи людей 
-                                признаются друг другу в любви, мы признались в любви к делу, которым занимаемся до сих пор. 
-                                Именно в этот день в городе Владимир по адресу ул. Дворянская, 10 (ЦУМ «Валентина») открылся 
-                                небольшой островок, где всё и началось.
-                                <br />
-                                Скромное рабочее место среди прилавков торгового центра стало точкой старта. Несмотря на ограниченные 
-                                ресурсы, мы сразу поставили цель — стать местом, где ремонт телефонов не просто услуга, 
-                                а гарантированное решение проблемы клиента с заботой, вниманием и качеством.
-                            </p>
-                        </div>
                     </div>
                 </div>
                 <div className="about__now">
@@ -77,6 +62,27 @@ export default function AboutUs () {
                         </div>
                     </div>
                 </div>
+                <div className="about__past">
+                    <h3 className="h3">Начало работы в 2019 году</h3>
+                    <div className="about__past-wrapper">
+                        <div className="about-us__past-column-left">
+                            <img src={past1} alt="фото сервиса в прошлом - 1" className="about-us__image" />
+                            <img src={past2} alt="фото сервиса в прошлом - 2" className="about-us__image" />
+                        </div>
+                        <div className="about-us__past-column-right">
+                            <p className="p">
+                                Сервисный центр «ЯбСделал» начал свою работу 14 февраля 2019 года — в день, когда тысячи людей 
+                                признаются друг другу в любви, мы признались в любви к делу, которым занимаемся до сих пор. 
+                                Именно в этот день в городе Владимир по адресу ул. Дворянская, 10 (ЦУМ «Валентина») открылся 
+                                небольшой островок, где всё и началось.
+                                <br />
+                                Скромное рабочее место среди прилавков торгового центра стало точкой старта. Несмотря на ограниченные 
+                                ресурсы, мы сразу поставили цель — стать местом, где ремонт телефонов не просто услуга, 
+                                а гарантированное решение проблемы клиента с заботой, вниманием и качеством.
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <div className="about__other">
                     <h3 className="h3">Постоянное место — стабильность для клиентов</h3>
                     <p className="p">
@@ -98,5 +104,6 @@ export default function AboutUs () {
                 </div>
             </div>
         </div>
+        </>
     )
 }

@@ -12,14 +12,14 @@ const validationSchema = Yup.object({
   tel: Yup.string()
     .required("Обязательное поле")
     .matches(
-      /^(\+7|8)?[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/,
+      /^(\+7|8)?[\s-]?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/,
       "Неверный номер телефона"
     ),
   name: Yup.string()
   .required("Обязательное поле")
   .min(2, "Минимум 2 символа")
   .max(32, "Максимум 32 символа")
-  .matches(/^[A-Za-zА-Яа-яЁё\s\-]+$/, "Имя не должно содержать цифры или спецсимволы"),
+  .matches(/^[A-Za-zА-Яа-яЁё\s-]+$/, "Имя не должно содержать цифры или спецсимволы"),
   privacy: Yup.boolean()
   .oneOf([true], "Для отправки данных вы должны принять условия")
   .required("Подтверждение обязательно"),
@@ -81,21 +81,21 @@ export default function ContactForm({type="", header=""}) {
             <label className="form__radiobox-wrapper p">
                 <input type="radio" name="contactMethod" className="form__radiobox" value="phone" onChange={formik.handleChange}
                 checked={formik.values.contactMethod === "phone"} />
-                <span class="form__radiobox-custom"></span>
+                <span className="form__radiobox-custom"></span>
                 По телефону
             </label>
           
             <label className="form__radiobox-wrapper p">
               <input type="radio" name="contactMethod" className="form__radiobox" value="sms" onChange={formik.handleChange}
               checked={formik.values.contactMethod === "sms"} />
-              <span class="form__radiobox-custom "></span>
-              Написать мне в WhatsApp/Telegram/SMS
+              <span className="form__radiobox-custom "></span>
+              Написать мне в мессенджерах (Telegram/Другой мессенджер) или SMS
             </label>
           </div>
           <div className="form__checkbox-group">
             <label className="form__checkbox-wrapper">
               <input type="checkbox" name="privacy" className="form__checkbox" onChange={formik.handleChange} />
-              <span class="form__checkbox-custom"></span>
+              <span className="form__checkbox-custom"></span>
               <p className="p">Я согласен с  <Link to="/privacy" className="contact__href">политикой конфиденциальности</Link> и даю свое согласие на <Link to="/privacy" className="contact__href"> обработку персональных данных.</Link></p>
             </label>
             {formik.touched.privacy && formik.errors.privacy && (

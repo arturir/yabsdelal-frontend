@@ -1,7 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { useState, useEffect} from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useFormik } from "formik";
 import { useGetBrandsQuery } from "../../slices/priceApi";
 import { useLazyGetModelsByBrandQuery } from "../../slices/priceApi";
@@ -11,8 +10,8 @@ import { Link } from "react-router-dom";
 
 export default function Calc ({defaultBrandId=""}) {
 
-  const {data: brands, error: errorBrands, isLoading: isLoadingBrands, isSuccess: isSuccessBarnds, isError: isErrorBrands, refetch} = useGetBrandsQuery();
-  const [getModels, { data: models, isLoading: isLoadingModels, isSuccess: isSuccessModels, error: errorModels, isError: isErrorModels}] = useLazyGetModelsByBrandQuery();
+  const { data: brands, isLoading: isLoadingBrands, isSuccess: isSuccessBarnds, isError: isErrorBrands } = useGetBrandsQuery();
+  const [ getModels, { data: models, isSuccess: isSuccessModels, error: errorModels, isError: isErrorModels} ] = useLazyGetModelsByBrandQuery();
 
   const [brandsList, setBrandsList] = useState([]);
   const [modelsList, setModelsList] = useState([]);
@@ -102,7 +101,7 @@ export default function Calc ({defaultBrandId=""}) {
                 }
               </select>         
               {price && (<h3 className="h3 calc__total">Итого: <b>{price}₽</b></h3>)}
-              {price && (<><p className="p">Нажмите "Далее" чтобы узнать точную стоимость ремонта.</p><p className="p-small">Расчёт стоимости, предоставляемый на сайте, является предварительным и не является публичной офертой. Стоимость работы указана без детали.</p></>)}
+              {price && (<><p className="p">Нажмите &quot;Далее&quot; чтобы узнать точную стоимость ремонта.</p><p className="p-small">Расчёт стоимости, предоставляемый на сайте, является предварительным и не является публичной офертой. Стоимость работы указана без детали.</p></>)}
               <button type="submit" className="form__button form__button--type-next" disabled={servicesList?.length===0 || modelsList?.length===0}>Дальше →</button>
             </form>)}
             </div>

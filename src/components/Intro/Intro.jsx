@@ -1,15 +1,15 @@
 import React from "react";
 import Map from "../Map/Map";
 
-export default function Intro () {
+export default function Intro ({h1, h3, p}) {
 
     return (
-        <div className={"intro"}>
-            <div className={"intro__wrapper"}>
+        <div className="intro">
+            <div className="intro__wrapper">
                 <div className="intro__left-column">
-                    <h1 className="h1">Наладим ваш телефон сегодня, за 3 часа</h1>
-                    <h3 className="h3 intro__h3">Готово в день обращения</h3>
-                    <p className="p">Заберите готовый телефон в день обращения, запчасти уже есть в наличии</p>
+                    <h1 className="h1">{h1}</h1>
+                    <h3 className="h3 intro__h3">{h3}</h3>
+                    <p className="p">{p}</p>
                     <div className="intro__strip"> </div>
                     <ul className="intro__targets">
                         <div className="intro__row-targets">

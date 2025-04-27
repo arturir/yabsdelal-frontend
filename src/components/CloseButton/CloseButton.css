@@ -1,0 +1,18 @@
+.close-button {
+    height: 22px;
+    width: 22px;
+    background-image: url("../../images/close.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: center;
+    margin-left: 8px;
+}
+.close-button:hover {
+    cursor: pointer;
+}
+.close-button--callback {
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    z-index: 999;
+}

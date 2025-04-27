@@ -1,5 +1,4 @@
 import React from "react";
-import {useSendOrderMutation, useSendCallbackMutation} from "../../slices/orderApi";
 import StatusIndicator from "../StatusIndicator/StatusIndicator";
 
 export default function StatusForm ({isSendingOrder, isSendingCallback, isSuccessOrder, isSuccessCallback, sendOrderError, sendCallbackError}) {

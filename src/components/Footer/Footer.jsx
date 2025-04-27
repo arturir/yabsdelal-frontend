@@ -14,13 +14,13 @@ export default function Footer () {
                             <NavLink to="/" className="p">Главная</NavLink>
                         </li>
                         <li className="footer__nav-item">
-                            <NavLink to="/services" className="p">Наши услуги</NavLink>
+                            <NavLink to="/about" className="p">О нас</NavLink>                                            
+                        </li>
+                        <li className="footer__nav-item">
+                            <Link to="https://vk.com/remontiphonevladimir" className="p" target="_blank">Мы во Вконтакте </Link>                                            
                         </li>
                     </ul>
                     <ul className="footer__nav-list">
-                        <li className="footer__nav-item">
-                            <NavLink to="/about" className="p">О нас</NavLink>                                            
-                        </li>
                         <li className="footer__nav-item">
                             <NavLink to="/kontakty" className="p">Контакты</NavLink>                        
                         </li>

@@ -15,7 +15,7 @@ export default function ContactUs () {
                 </div>
                 <div className="contact-us__column-right">
                     <h3 className="h3">С нами легко связаться и обсудить детали ремонта</h3>
-                    <p className="p">Свяжитесь с нами через мессенджеры: WhatsApp, Telegram, Вконтакте или по телефону. 
+                    <p className="p">Свяжитесь с нами через мессенджеры: Telegram, Вконтакте, другие популярные мессенджеры или по телефону. 
                         Мы подскажем и ответим на любой ваш вопрос.
                     </p>
                     <PhoneMessenger />

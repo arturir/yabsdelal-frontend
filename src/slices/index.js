@@ -1,5 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-import priceReducer from "./priceSlice";
 import orderFormReducer from  "./orderFormSlice";
 import { priceApi } from "./priceApi";
 import { orderApi } from "./orderApi";

@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import viber from "../../images/icons-messengers/viber.svg";
-import whatsapp from "../../images/icons-messengers/whatsapp.svg";
+import vk from "../../images/icons-messengers/vk.svg";
 import telegram from "../../images/icons-messengers/telegram.svg";
 import { servicesList } from "../../constants/servicesList";
 
@@ -36,9 +35,12 @@ export default function Navigation ({openBurgerMenu}) {
                         <NavLink to="/kontakty" className={"menu__link"} >Контакты</NavLink>
                     </div>
                     <div className="menu__wrapper-messengers">
-                        <img src={whatsapp} className="menu__messenger" />
-                        <img src={viber} className="menu__messenger" />
-                        <img src={telegram} className="menu__messenger" />
+                        <Link to="https://t.me/vladimiriphone" target="_blank" >
+                            <img src={telegram} className="menu__messenger" alt="Ссылка на диалог в Telegram" />
+                        </Link>
+                        <Link to="https://vk.me/remontiphonevladimir" target="_blank" >
+                            <img src={vk} className="menu__messenger" alt="Ссылка на диалог в ВК"/>
+                        </Link>
                         <div className="menu__burger" onClick={openBurgerMenu}></div>
                     </div>
                             

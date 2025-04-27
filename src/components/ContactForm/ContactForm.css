@@ -29,15 +29,19 @@
 
 }
 .contact__wrapper {
-    width: 600px;
+    width: 700px;
 }
 .contact__sent-form {
 margin: 0 auto;
 }
 }
 @media (min-width: 1060px) {
-
+    .contact__wrapper {
+        width: 1000px;
+    }
 }
 @media (min-width: 1280px) {
-
+    .contact__wrapper {
+        width: 1064px;
+    }
 }

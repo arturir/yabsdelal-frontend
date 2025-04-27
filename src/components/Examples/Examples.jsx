@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Gallery from "../Gallery/Gallery";
 import thumb1 from "../../images/gallery/thumbnails/thumb1.jpg";
 import thumb2 from "../../images/gallery/thumbnails/thumb2.jpg";

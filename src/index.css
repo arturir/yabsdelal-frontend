@@ -1,13 +1,15 @@
 @import url(./styles/reset.css);
 @import url(./styles/typography.css);
 @import url(./styles/body/body.css);
+@import url(./styles/body/_no-scroll/body_no-scroll.css);
 @import url(./styles/page.css);
 @import url(./components/Logo/Logo.css);
+@import url(./components/CloseButton/CloseButton.css);
 @import url(./components/Navigation/Navigation.css);
 @import url(./components/Burgermenu/Burgermenu.css);
-@import url(./components/Popup/Popup.css);
 @import url(./components/Intro/Intro.css);
 @import url(./components/Prices/Prices.css);
+@import url(./components/PhoneInfo/PhoneInfo.css);
 @import url(./components/CalcForm/CalcForm.css);
 @import url(./components/Form/Form.css);
 @import url(./components/ContactForm/ContactForm.css);
@@ -25,3 +27,4 @@
 @import url(./components/VkWidget/VkWidget.css);
 @import url(./pages/AboutUs/AboutUs.css);
 @import url(./pages/PageNoteFound/PageNoteFound.css);   
+@import url(./components/FloatingContact/FloatingContact.css);

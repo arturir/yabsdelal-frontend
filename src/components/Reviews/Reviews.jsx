@@ -15,7 +15,7 @@ export default function Reviews () {
                 </div>
                 <p className="p">
                     95% положительных отзывов. Нас рекомендуют друзьям, знакомым и не только. 
-                    Больше 200 положительных отзывов на независимых площадках.
+                    Больше 300 положительных отзывов на независимых площадках.
                 </p>
                 <div className="reviews__resources">
                     <Link to="https://maps.app.goo.gl/YYvpQavfLFYs795L8"className="reviews__link-resource" target="_blank" rel="noopener noreferrer">

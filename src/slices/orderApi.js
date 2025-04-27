@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-// Используем только baseUrl, так как порт и URL уже указаны в baseQuery
 const URL = process.env.REACT_APP_API_URL;
 const PORT = process.env.REACT_APP_API_PORT;
 

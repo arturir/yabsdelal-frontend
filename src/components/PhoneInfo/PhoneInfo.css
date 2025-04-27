@@ -1,0 +1,34 @@
+.phone-info {
+    width: 100%;
+    margin-top: 32px;
+}
+.phone-info__wrapper {
+    width: 340px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+.phone-info__h3 {
+    margin: 0 0 10px;
+}
+.phone-info__p {
+    margin: 0 0 10px;
+}
+@media (min-width: 768px) {
+    .phone-info__wrapper {
+        width: 708px;
+    }
+}
+@media (min-width: 1060px) {
+    .phone-info__wrapper {
+        width: 1000px;
+    }
+}
+@media (min-width: 1280px) {
+    .phone-info__wrapper {
+        width: 1064px;
+    }
+    .phone-info__h3 {
+        font-weight: 400;
+    }
+}
