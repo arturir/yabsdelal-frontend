@@ -17,6 +17,8 @@ import Tecno from './pages/Tecno/Tecno';
 import Infinix from './pages/Infinix/Infinix';
 import Other from './pages/Other/Other';
 import FloatingContact from './components/FloatingContact/FloatingContact';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import ScrollTop from './components/ScrollTop/ScrollTop';
 import { useState } from 'react';
 
 export default function App() {
@@ -25,6 +27,7 @@ export default function App() {
 
   return (
     <div className="page">
+      <ScrollTop />
       <Navigation openBurgerMenu={() => setBuregerMenuIsOpen(true)}/>
       {buregerMenuIsOpen && <Burgermenu closeBurgerMenu={()=>setBuregerMenuIsOpen(false)}/>}
       <FloatingContact />
@@ -42,6 +45,7 @@ export default function App() {
         <Route path="/repair-tecno" element={<Tecno />} />
         <Route path="/repair-infinix" element={<Infinix />} />
         <Route path="/repair-other" element={<Other />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="*" element={<PageNotFound />} /> 
       </Routes>
       <Footer />

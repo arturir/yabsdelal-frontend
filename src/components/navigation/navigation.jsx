@@ -13,10 +13,14 @@ export default function Navigation ({openBurgerMenu}) {
             <nav className={"menu"}>
                 <div className="menu__wrapper">
                     <div className="menu__address-wrapper">
-                    <Link to="/" className={"logo"} >ЯбСделал</Link>
-                    <Link to="tel:+79300304430" className={"menu__number"} >+7 (930) 030 44 30</Link>
-                    <p className="menu__address">Дворянская 10 (ЦУМ Валентина), 2 этаж</p>
-                    <NavLink to="/kontakty" className={"menu__scheme"} >Схема прохода</NavLink>
+                        <Link to="/" className={"logo"} >ЯбСделал</Link>
+                        <div className="menu__mobile-contats">
+                            <p className="menu__mobile-address">Дворянская 10 (ЦУМ, центр. вход), 2 этаж</p>
+                            <NavLink to="/kontakty" className={"menu__mobile-scheme"}>Схема прохода и контакты</NavLink>
+                        </div>
+                        <Link to="tel:+79300304430" className={"menu__number"} >+7 (930) 030 44 30</Link>
+                        <p className="menu__address">Дворянская 10 (ЦУМ, центр. вход), 2 этаж</p>
+                        <NavLink to="/kontakty" className={"menu__scheme"} >Схема прохода</NavLink>
                     </div>
                     <div className="menu__links-wrapper">
                         <div className="menu__our-services-wrapper">

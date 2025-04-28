@@ -2,6 +2,7 @@
 ***
 Ссылка на сайт - [yabsdelal.ru](https://yabsdelal.ru)
 Репозиторий - https://github.com/arturir/yabsdelal-frontend
+Макет в [Figma](https://www.figma.com/design/OHQDTtkS0h9QIa29BY5vXu/Untitled?node-id=0-1&m=dev&t=OaBO8BbSWpMfZl4F-1)
 
 ***
 
@@ -41,7 +42,5 @@ npm start
 
 * Telegram: @galtyaev
 * Email: artifakt666@yandex.ru 
-
-## 📞 Контакты
 
 🔧 ЯбСделал — мы всё починим!

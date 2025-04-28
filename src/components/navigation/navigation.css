@@ -9,7 +9,7 @@
 }
 .menu__area {
     display: block;
-    height: 28px;
+    height: 80px;
     margin: 10px 0 15px;
 }
 .menu__wrapper {
@@ -56,12 +56,19 @@
 .menu__links-wrapper {
     display: none;
 }
+.menu__mobile-address {
+    font-size: 12px;
+}
+.menu__mobile-scheme {
+    font-size: 12px;
+    text-decoration: underline !important;
+}
 @media (min-width: 768px) {
     .menu__wrapper {
         width: 708px;
     }
     .menu__area {
-        height: 28px;
+        height: 80px;
     }
 }
 @media (min-width: 1060px ) {
@@ -72,6 +79,9 @@
         width: 1000px;
     }
     .menu__burger {
+        display: none;
+    }
+    .menu__mobile-contats {
         display: none;
     }
     .menu__links-wrapper {

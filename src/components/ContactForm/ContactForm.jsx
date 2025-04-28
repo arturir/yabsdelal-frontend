@@ -96,7 +96,7 @@ export default function ContactForm({type="", header=""}) {
             <label className="form__checkbox-wrapper">
               <input type="checkbox" name="privacy" className="form__checkbox" onChange={formik.handleChange} />
               <span className="form__checkbox-custom"></span>
-              <p className="p">Я согласен с  <Link to="/privacy" className="contact__href">политикой конфиденциальности</Link> и даю свое согласие на <Link to="/privacy" className="contact__href"> обработку персональных данных.</Link></p>
+              <p className="p">Я согласен с  <Link to="/privacy" className="contact__href" target="_blank">политикой конфиденциальности</Link> и даю свое согласие на <Link to="/privacy" className="contact__href" target="_blank"> обработку персональных данных.</Link></p>
             </label>
             {formik.touched.privacy && formik.errors.privacy && (
             <p className="form__error-text form__error-text--privacy">{formik.errors.privacy}</p>
