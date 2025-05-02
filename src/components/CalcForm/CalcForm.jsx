@@ -6,7 +6,7 @@ import { useGetBrandsQuery } from "../../slices/priceApi";
 import { useLazyGetModelsByBrandQuery } from "../../slices/priceApi";
 import { addFormOrder, goToNextPage } from "../../slices/orderFormSlice";
 import StatusIndicator from "../StatusIndicator/StatusIndicator";
-import { Link } from "react-router-dom";
+import TabsContainer from "../TabsContainer/TabsContainer";
 
 export default function Calc ({defaultBrandId=""}) {
 
@@ -17,10 +17,8 @@ export default function Calc ({defaultBrandId=""}) {
   const [modelsList, setModelsList] = useState([]);
   const [servicesList, setServicesList] = useState([]);
   const [price, setPrice] = useState();
-  const [activeTab, setActiveTab] = useState("garanty");
 
   const dispatch = useDispatch();
-
 
   const formik = useFormik({
     initialValues: { brand: defaultBrandId , model: "", service: "" },
@@ -31,7 +29,7 @@ export default function Calc ({defaultBrandId=""}) {
   });
 
   useEffect(() => {
-    if (isSuccessBarnds && !isErrorBrands) { // при первоночальной загрузке установить список брендов
+    if (isSuccessBarnds && !isErrorBrands) { 
       setBrandsList(brands);
     }
   }, [isSuccessBarnds]);
@@ -72,7 +70,6 @@ export default function Calc ({defaultBrandId=""}) {
   }, [formik.values.service, servicesList]);
 
   return (
-    
       <div className="calc">
         <div className="calc__wrapper">
           <div className="calc__column-left">
@@ -110,54 +107,7 @@ export default function Calc ({defaultBrandId=""}) {
             </form>)}
             </div>
             <div className="calc__column-right">
-              {activeTab==="garanty" && (<div className="calc__content">
-                <h3 className="h3 calc__h3">Наша гарантия</h3>
-                <p className="p">
-                Наша гарантия - ваша защита.  Предоставляем гарантию на ремонт. 
-                Выдаем все необходимые документы. Акт приема, гарантийный талон и
-                акт выдачи, а также чек.
-                </p>
-                <ul className="calc__list">
-                  <li className="calc__list-item p">На аккумуляторы iPhone original - 6 месяцев</li>
-                  <li className="calc__list-item p">На оригинальные сервисные запчасти – 3 месяца</li>
-                  <li className="calc__list-item p">На аккумуляторы - 3 месяца</li>
-                  <li className="calc__list-item p">Все остальное - от 1 месяца</li>
-                </ul>
-              </div>)}
-              {activeTab==="term" && (<div className="calc__content">
-                <h3 className="h3 calc__h3">Сроки исполнения</h3>
-                <p className="p">
-                Мы ценим ваше время и стараемся выполнять ремонт максимально быстро.
-                Уточнённое время всегда озвучивается при приёме устройства. 
-                Мы придерживаемся сроков и сообщаем, если что-то меняется.
-                </p>
-                <ul className="calc__list">
-                  <li className="calc__list-item p">Замена аккумулятора iPhone - 1-2 часа</li>
-                  <li className="calc__list-item p">Замена дисплея iPhone - 1-2 часа</li>
-                  <li className="calc__list-item p">Замена задней крышки iPhone - до 4 часов</li>
-                  <li className="calc__list-item p">Замена дисплея Android -  2-4 часа</li>
-                  <li className="calc__list-item p">Остальной модульный ремонт - 2-3 часа</li>
-                  <li className="calc__list-item p">Компонентный ремонт (пайка, восстановление цепей) - от 1 дня</li>
-                </ul>
-              </div>)}
-              {activeTab==="search" && (<div className="calc__content">
-                <h3 className="h3 calc__h3">Не нашли своё устройство?</h3>
-                <p className="p">
-                  Если вы не нашли своё устройство в списке — не беда. 
-                  Мы работаем с большим количеством моделей и поможем вам даже в нестандартных случаях.
-                  Ответим быстро, подскажем по срокам и сориентируем по цене.
-                  Просто напишите нам в удобный мессенджер — уточним возможность и стоимость ремонта.
-                </p>
-                <ul className="calc__list">
-                  <li className="calc__list-item p">WhatsApp / Telegram: <Link to="tel:+79300304430" className="calc__href">+7 (930) 030 44 30</Link></li>
-                  <li className="calc__list-item p">ВКонтакте: <Link to="https://vk.com/remontiphonevladimir" className="calc__href">vk.com/remontiphonevladimir</Link></li>
-                </ul>
-              </div>)}
-              <ul className="calc__nav">
-                <li className={`calc__tab ${activeTab === "garanty" ? "calc__tab_active" : ""}`}onClick={()=>setActiveTab("garanty")} >Про гарантию →</li>
-                <li className={`calc__tab ${activeTab === "term" ? "calc__tab_active" : ""}`} onClick={()=>setActiveTab("term")}>Сроки исполнения →</li>
-                <li className={`calc__tab ${activeTab === "search" ? "calc__tab_active" : ""}`} onClick={()=>setActiveTab("search")}>Нет вашего устройства →</li>
-              </ul>
+              <TabsContainer />
             </div>
           </div>
       </div>

@@ -46,6 +46,7 @@ export default function App() {
         <Route path="/repair-infinix" element={<Infinix />} />
         <Route path="/repair-other" element={<Other />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/privacy.pdf" element={<PrivacyPolicy />} />
         <Route path="*" element={<PageNotFound />} /> 
       </Routes>
       <Footer />
