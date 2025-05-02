@@ -7,7 +7,7 @@ import Reviews from '../../components/Reviews/Reviews';
 import ContactUs from '../../components/ContactUs/ContactUs';
 import Location from '../../components/Location/Location';
 import { useSelector } from 'react-redux';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 function Main() {
 

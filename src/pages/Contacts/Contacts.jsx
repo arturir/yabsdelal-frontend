@@ -1,7 +1,7 @@
 import ContactsIntro from '../../components/ContactsIntro/ContactsIntro';
 import Scheme from '../../components/Scheme/Scheme';
 import Details from '../../components/Details/Details';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 export default function App() {
 

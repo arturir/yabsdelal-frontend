@@ -5,7 +5,7 @@ import now3 from "../../images/about-us/now3.jpg";
 import now4 from "../../images/about-us/now4.jpg";
 import past1 from "../../images/about-us/past1.jpg";
 import past2 from "../../images/about-us/past2.jpg";
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 export default function AboutUs () {
     

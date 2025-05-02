@@ -5,7 +5,7 @@ import Examples from '../../components/Examples/Examples';
 import Reviews from '../../components/Reviews/Reviews';
 import ContactUs from '../../components/ContactUs/ContactUs';
 import Location from '../../components/Location/Location';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 function Other() {
 
