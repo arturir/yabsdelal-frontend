@@ -1,6 +1,7 @@
 @import url(./styles/reset.css);
 @import url(./styles/typography.css);
 @import url(./styles/body/body.css);
+@import url(./fonts/stylesheet.css);
 @import url(./styles/body/_no-scroll/body_no-scroll.css);
 @import url(./styles/page.css);
 @import url(./components/Logo/Logo.css);

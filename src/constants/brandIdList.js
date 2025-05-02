@@ -5,7 +5,7 @@ const iphone = '65ed7fdb25b17a2eb8d4414a',
       realme = '65ed7f8725b17a2eb8d4413e',
       vivo = '65ed7f9325b17a2eb8d44140',
       tecno = '65ed7fa225b17a2eb8d44142',
-      oppo = '65ed7f8725b17a2eb8d4413e', //need fix
-      infinix = '65ed7f9325b17a2eb8d44140'; //need fix
+      oppo = '680e48d7d54cf52be70b1362',
+      infinix = '680e48a9d54cf52be70b1360'; 
 
 export { iphone, huawei, xiaomi, samsung, realme, vivo, tecno, oppo, infinix }

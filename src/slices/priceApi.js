@@ -1,18 +1,16 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-// Используем только baseUrl, так как порт и URL уже указаны в baseQuery
-const URL = process.env.REACT_APP_API_URL;
-const PORT = process.env.REACT_APP_API_PORT;
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const priceApi = createApi({
     reducerPath: 'price',
-    baseQuery: fetchBaseQuery({ baseUrl: `${URL}:${PORT}/` }), // Это устанавливает общий baseUrl для всех запросов
+    baseQuery: fetchBaseQuery({ baseUrl: `${API_URL}/` }),
     endpoints: (builder) => ({
         getBrands: builder.query({
-            query: () => "brands",  // Только относительный путь
+            query: () => "brands",
         }),
         getModelsByBrand: builder.query({
-            query: (id) => `models/brand/${id}`, // Только относительный путь
+            query: (id) => `models/brand/${id}`,
         }),
     }),
 });

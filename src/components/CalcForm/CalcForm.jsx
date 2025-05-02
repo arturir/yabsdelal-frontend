@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 export default function Calc ({defaultBrandId=""}) {
 
   const { data: brands, isLoading: isLoadingBrands, isSuccess: isSuccessBarnds, isError: isErrorBrands } = useGetBrandsQuery();
-  const [ getModels, { data: models, isSuccess: isSuccessModels, error: errorModels, isError: isErrorModels} ] = useLazyGetModelsByBrandQuery();
+  const [ getModels, { data: models, isSuccess: isSuccessModels, isError: isErrorModels} ] = useLazyGetModelsByBrandQuery();
 
   const [brandsList, setBrandsList] = useState([]);
   const [modelsList, setModelsList] = useState([]);
@@ -19,27 +19,34 @@ export default function Calc ({defaultBrandId=""}) {
   const [price, setPrice] = useState();
   const [activeTab, setActiveTab] = useState("garanty");
 
-
   const dispatch = useDispatch();
+
 
   const formik = useFormik({
     initialValues: { brand: defaultBrandId , model: "", service: "" },
     onSubmit: ({brand, model, service}) => {
-      console.log(brand, model, service)
       dispatch(addFormOrder({brand, model, service}));
       dispatch(goToNextPage());
     },
   });
 
-  useEffect(()=> {
-    if (isSuccessBarnds && !isErrorBrands) {
+  useEffect(() => {
+    if (isSuccessBarnds && !isErrorBrands) { // при первоночальной загрузке установить список брендов
       setBrandsList(brands);
-      formik.setValues({...formik.values, brand: brands[0]?._id});
     }
   }, [isSuccessBarnds]);
 
+  useEffect(() => {
+    if (isSuccessBarnds && !isErrorBrands) { 
+      if (defaultBrandId) {
+        formik.setValues({...formik.values, brand: defaultBrandId});
+      } else {        
+        formik.setValues({...formik.values, brand: brands[0]?._id});
+      }
+    }
+  }, [brandsList])
+
   useEffect(()=> {
-      console.log("выбор бренда", formik.values.brand)
       setModelsList([]);
       setServicesList([]);
       setPrice();
@@ -47,11 +54,8 @@ export default function Calc ({defaultBrandId=""}) {
   }, [formik.values.brand]);
 
   useEffect(()=> {
-    console.log("полученые модели", models)
     if(isSuccessModels && !isErrorModels) {
-      console.log(isSuccessModels, !isErrorModels, errorModels)
-      console.log("полученые модели", models)
-      setModelsList(models); //при выборе пустого бренда будут старные данные о моделях
+      setModelsList(models);
       formik.setValues({...formik.values, model: models[0]?._id});
     }
   }, [models, isSuccessModels]);
