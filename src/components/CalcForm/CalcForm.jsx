@@ -80,13 +80,13 @@ export default function Calc ({defaultBrandId=""}) {
               {!defaultBrandId &&
                 <>
                   <label htmlFor="brand" className="p">Выберите марку телефона</label>
-                  <select name="brand" className="form__input" value={formik.values.brand} onChange={formik.handleChange} >
+                  <select name="brand" id="brand" className="form__input" value={formik.values.brand} onChange={formik.handleChange} >
                     {brandsList?.map(item => (<option value={item._id} key={item._id}>{item.name}</option>))}
                   </select>
                 </>
               }
               <label htmlFor="brand" className="p">Выберите модель телефона</label>
-              <select name="model" className="form__input" value={formik.values.model} onChange={formik.handleChange}  disabled={modelsList?.length===0}>
+              <select name="model" id="model" className="form__input" value={formik.values.model} onChange={formik.handleChange}  disabled={modelsList?.length===0}>
                 {modelsList?.length>0?
                   modelsList?.map(item => (<option value={item._id} key={item._id}>{item.name}</option>)) 
                   :
@@ -94,7 +94,7 @@ export default function Calc ({defaultBrandId=""}) {
                 }
               </select>
               <label htmlFor="service" className="p">Выберите  услугу</label>
-              <select name="service" className="form__input" value={formik.values.service} onChange={formik.handleChange} disabled={servicesList?.length===0}> 
+              <select name="service" id="service" className="form__input" value={formik.values.service} onChange={formik.handleChange} disabled={servicesList?.length===0}> 
                 {servicesList?.length>0 ?
                   servicesList?.map(item => (<option value={item._id} key={item._id}>{item.name}</option>)) 
                   :
