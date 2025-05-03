@@ -3,7 +3,7 @@
     text-decoration: none;
     font-size: 20px;
     color: rgba(87, 217, 0, 1);
-    font-family: 'Segoe UI', 'Arial'; 
+    font-family:  'Segoe UI', 'Arial', sans-serif;
 }
 .logo--footer {
     margin: 20px 0 10px;

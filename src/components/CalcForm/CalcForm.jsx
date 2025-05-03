@@ -103,7 +103,7 @@ export default function Calc ({defaultBrandId=""}) {
               </select>         
               {price && (<h3 className="h3 calc__total">Итого: <b>{price}₽</b></h3>)}
               {price && (<><p className="p">Нажмите &quot;Далее&quot; чтобы узнать точную стоимость ремонта.</p><p className="p-small">Расчёт стоимости, предоставляемый на сайте, является предварительным и не является публичной офертой. Стоимость работы указана без детали.</p></>)}
-              <button type="submit" className="form__button form__button--type-next" disabled={servicesList?.length===0 || modelsList?.length===0}>Дальше →</button>
+              <button type="submit" className="form__button form__button--type-next" disabled={servicesList?.length===0 || modelsList?.length===0}>Далее →</button>
             </form>)}
             </div>
             <div className="calc__column-right">
