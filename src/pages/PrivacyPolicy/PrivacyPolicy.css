@@ -1,0 +1,12 @@
+.privacy-policy {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.privacy-policy__text-link {
+    text-align: center;
+    margin: 10px 0;
+}
+.privacy-policy__link {
+    color: #4C75A3 !important;
+}

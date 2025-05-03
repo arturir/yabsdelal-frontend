@@ -23,14 +23,19 @@
     width: 50%;
     background-color: #57D900;
     display: flex;
-    justify-content: center;
+    gap: 5px;
     align-items: center;
+    justify-content: center;
+   
 }
 .floating-contact__phone {
     color: #fff;
-    font-size: 12px;
-    margin: 0 auto;
-
+    font-size: 14px;
+    display: block;
+}
+.floating-contact__phone-logo {
+    width: 14px;
+    height: 14px;
 }
 @media (min-width: 1060px) {
     .floating-contact {
