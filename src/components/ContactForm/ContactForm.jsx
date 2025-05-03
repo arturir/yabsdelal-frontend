@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useSelector, useDispatch } from "react-redux";
 import { resetNavigation } from "../../slices/orderFormSlice";
-import ReactInputMask from "react-input-mask";
+import { IMaskInput } from "react-imask";
 import {useSendOrderMutation, useSendCallbackMutation} from "../../slices/orderApi";
 import StatusForm from "../StatusForm/StatusForm";
 
@@ -34,14 +34,12 @@ export default function ContactForm({type="", header=""}) {
   const formik = useFormik({
     initialValues: { name: "", tel: "", contactMethod: "phone", privacy: false},
     onSubmit:  (values, actions) => {
-      console.log(type);
       if (type==="order") {
-        const data = {customer: values.name, phone: values.tel.replace(/[\s()-]/g, ''), modelID: orderForm.model, serviceID: orderForm.service};
+        const data = {customer: values.name, phone: values.tel.replace(/[\s()-]/g, ''), modelID: orderForm.model, serviceID: orderForm.service, contactMethod: values.contactMethod};
         sendOrder(data);
         actions.setSubmitting(false);
       } else {
-        console.log(values.tel.replace(/[\s()-]/g, ''));
-        sendCallback({customer: values.name, phone: values.tel.replace(/[\s()-]/g, '')});
+        sendCallback({customer: values.name, phone: values.tel.replace(/[\s()-]/g, ''), contactMethod: values.contactMethod});
         actions.setSubmitting(false);
       }
       actions.resetForm();
@@ -65,9 +63,9 @@ export default function ContactForm({type="", header=""}) {
         /> 
         {!(isSendingOrder || isSendingCallback || isSuccessOrder || isSuccessCallback || sendOrderError || sendCallbackError) && (<form className="form" onSubmit={(e) => { e.preventDefault(); formik.handleSubmit(e)}}>
           <label htmlFor="brand" className="p">Номер телефона</label>
-          <ReactInputMask mask="+7 (999) 999-99-99" value={formik.values.tel} onChange={formik.handleChange} >
-              {(inputProps) => <input {...inputProps} name="tel" className="form__input" />}
-          </ReactInputMask>
+
+          <IMaskInput mask="+7 (000) 000-00-00" name="tel"  className="form__input" value={formik.values.tel}  
+            onAccept={(value) => formik.setFieldValue("tel", value)} onBlur={formik.handleBlur} />
           {formik.touched.tel && formik.errors.tel && (
           <p className="form__error-text">{formik.errors.tel}</p>
           )}

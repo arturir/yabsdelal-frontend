@@ -9,7 +9,6 @@ const orderFormSlice = createSlice({
     initialState,
     reducers: {
         addFormOrder: (state, { payload }) => {
-            console.log("model", payload.model, "service" ,payload.service);
             state.brand = payload.brand;
             state.model = payload.model;
             state.service = payload.service;
