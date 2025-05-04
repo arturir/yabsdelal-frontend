@@ -20,10 +20,13 @@ import FloatingContact from './components/FloatingContact/FloatingContact';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import ScrollTop from './components/ScrollTop/ScrollTop';
 import { useState } from 'react';
+import useYandexMetrikaPageview from './hooks/useYandexMetrikaPageview';
 
 export default function App() {
 
   const [buregerMenuIsOpen, setBuregerMenuIsOpen] = useState(false);
+
+  useYandexMetrikaPageview();
 
   return (
     <div className="page">
