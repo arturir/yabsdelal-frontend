@@ -17,7 +17,7 @@ export default function Gallery ({isOpen, setIsOpen}){
   }, [isOpen]);
   
   return (
-    <Modal isOpen={isOpen}  onRequestClose={() => setIsOpen(false)} >
+    <Modal isOpen={isOpen}  onRequestClose={() => setIsOpen(false)} style={{overlay: {zIndex: "100" }}} >
       <div className="close-button" style={{right:"10px", position: "absolute", zIndex: "999"}} onClick={()=>{setIsOpen(false)}}></div>
       <ImageGallery items={images}  showPlayButton={false} slideDuration={400} />
     </Modal>
